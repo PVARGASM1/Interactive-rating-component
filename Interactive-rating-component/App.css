@@ -1,0 +1,21 @@
+
+
+
+.container {
+  border-radius: 15px;
+  padding: 35px;
+  max-width: 350px;
+  max-height: 700px;
+  background-color: $medium-grey-color; 
+}
+
+.container__button {
+
+  justify-content: center; 
+}
+  .container__button {
+    height: 50px;
+    width: 140px;
+    border-radius: 30px;
+    color: $orange-color; 
+}
