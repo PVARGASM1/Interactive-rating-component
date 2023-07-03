@@ -7,7 +7,7 @@ $Light-grey-button: hsl(217, 12%, 63%);
 $Medium-Grey: hsl(216, 12%, 54%);
 $Dark-Blue: hsl(213, 19%, 18%);
 $Very-Dark-Blue: hsl(216, 12%, 8%);
-$font-size-p: 19px;
+$font-size-p: 17px;
 
 body {
     display: flex;
@@ -25,16 +25,15 @@ body {
     border-radius: 16px;
     margin: 2px; 
     padding: 25px;
-    max-width: 400px;
+    width: 24rem;
     max-height: 450px;
     background: linear-gradient(to bottom, hsl(213, 19%, 18%), #20272f, #1c2027, hsl(216, 12%, 8%), #171a1f);;
-}
 
-.container__text{
+    .container__text{
    
     text-align: left;
 
-    span {
+    section {
         align-content: space-between;
         width: 50px;
         height: 50px ;
@@ -66,7 +65,7 @@ body {
     flex-direction: row;
     justify-content: space-evenly; 
     
-    div { 
+    .no-active { 
         width: 50px;
         height: 50px ;
         display: flex;
@@ -77,8 +76,19 @@ body {
         border-radius: 50%;
         color: $Light-grey-button;
     }
-    div:hover {
+    .no-active:hover {
         background-color: $Primary-color;
+        color: $white-color;
+    }
+    .active {
+        width: 50px;
+        height: 50px ;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        margin: 2px;
+        background-color: $Primary-color;
+        border-radius: 50%;
         color: $white-color;
     }
     
@@ -107,6 +117,60 @@ div {
     font-size: 20px;
     text-align: center;
 }
+}
+
+//THANKS-CARD STYLES
+
+.container-thanks {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 16px;
+    margin: 2px; 
+    padding: 25px;
+    max-width: 22rem;
+    max-height: 450px;
+    font-family:'Overpass', sans-serif;
+    background: linear-gradient(to bottom, hsl(213, 19%, 18%), #20272f, #1c2027, hsl(216, 12%, 8%), #171a1f);;
+
+    .container__img {
+        flex-direction: column;
+        display: flex;
+        width: 75%;
+        margin: 0 auto;
+
+    img {
+        width: 65%;
+        margin: 0 auto;
+        }
+
+     p {
+        border-radius: 20px;
+        padding: 5px 0;
+        text-align: center;
+        font-size: 14px;
+        color: $Primary-color;
+        opacity: 0.6;
+        background-color: $Dark-Blue;  
+     }   
+    }
+    .text {
+        color: $Light-grey-button;
+       text-align: center;
+
+       h2 {
+        color: $white-color;
+       }
+       p{
+        font-size: 14px;
+       }
+    }
+
+}
+
+
+
 
 
 

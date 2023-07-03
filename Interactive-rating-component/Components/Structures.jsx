@@ -1,18 +1,15 @@
 import React from "react";
 import Star from '../src/assets/icon-star.svg'
 
-const Structure = ({ cambiaNota, calificacion }) => {
-  const sayHi = () => {
-    alert(` Thanks for your rate ${calificacion}`);
-    console.log(calificacion)
-  };
+const Structure = ({rate, onClick}) => {
+
   return (
     <div className="container">
       <div className="container__text">
         
-        <span>
+        <section>
         <img src={Star} alt="Star" />
-        </span>
+        </section>
    
         <h1>How did we do?</h1>
        
@@ -23,24 +20,13 @@ const Structure = ({ cambiaNota, calificacion }) => {
       </div>
       <br />
       <div className="container__note">
-        
-        
-          <div 
-          className={cambiaNota >= 1 ? 'hover': ''}
-          onClick={() => cambiaNota(1)}>1</div>    
-          <div 
-          className={cambiaNota >= 2 ? 'hover': ''}
-          onClick={() => cambiaNota(2)}>2</div>    
-          <div onClick={() => cambiaNota(3)}>3</div>
-          <div onClick={() => cambiaNota(4)}>4</div>
-          <div onClick={() => cambiaNota(5)}>5</div>
-          
+        {rate}
       </div>
 
       <br />
 
       <div className="container__button">
-        <button onClick={sayHi}>SUBMIT</button>
+        <button onClick={onClick}>SUBMIT</button>
       </div>
     </div>
   );
